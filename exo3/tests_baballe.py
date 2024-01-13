@@ -37,5 +37,9 @@ class TestAppliBaballe(unittest.TestCase):
         self.assertNotEqual(self.app.dx, 0)
         self.assertNotEqual(self.app.dy, 0)
 
+    def test_stop(self):
+        self.app.stop(Event())
+        self.assertEqual(self.app.stop(Event()), "App stopped successfully.")
+
 if __name__ == '__main__':
     unittest.main()

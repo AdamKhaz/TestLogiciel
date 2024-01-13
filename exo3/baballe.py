@@ -79,7 +79,11 @@ class AppliBaballe(tk.Tk):
 
     def stop(self, esc):
         """Quitte l'application."""
-        self.quit()
+        try:
+            self.quit()
+            return "App stopped successfully."
+        except:
+            return "App can't be stopped."
 
 
 if __name__ == "__main__":
